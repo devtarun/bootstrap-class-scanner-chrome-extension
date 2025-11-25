@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Bootstrap Class Scanner (Sidebar)",
+  "version": "1.0",
+  "description": "Scan page and list exact matches of classes present in chosen Bootstrap CSS.",
+  "action": {
+    "default_title": "Open Bootstrap Class Scanner"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "bootstrap-v4alpha.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+
