@@ -219,7 +219,7 @@ function renderResults(resultObj, resultsEl, infoEl, sortBy = "name", sortDir = 
   ul.style.cssText = "list-style:none;padding-left:10px;margin:0";
   matches.forEach(cls => {
     const li = document.createElement("li");
-    li.style.cssText = "padding:6px 0;border-bottom:1px solid #f2f2f2;font-size:13px;display:flex;justify-content:space-between;";
+    li.style.cssText = "padding:6px 0;border-bottom:1px solid #f2f2f2;font-size:13px;display:flex;justify-content:space-between;cursor:pointer;";
     const badge = document.createElement("span");
     badge.textContent = cls.name;
     const count = document.createElement("span");
